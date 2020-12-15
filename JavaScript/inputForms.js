@@ -37,6 +37,19 @@ tel.addEventListener("input", function () {
   }
 });
 
+//UC4-Password validation minimum 8 characters
+
+const pwd = document.querySelector("#pwd");
+const pwdError = document.querySelector(".pwd-error");
+pwd.addEventListener("input", function () {
+  let pwdRegex = RegExp("^.{8,}$");
+  if (pwdRegex.test(pwd.value)) {
+    pwdError.textContent = "";
+  } else {
+    pwdError.textContent = "password is not Valid";
+  }
+});
+
 //Salary range button synchronised with values of user
 const salary = document.querySelector("#salary");
 const output = document.querySelector(".salary-output");
