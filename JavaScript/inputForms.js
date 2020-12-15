@@ -10,6 +10,7 @@ text.addEventListener("input", function () {
 });
 
 //UC2 -Email Validation
+
 const email = document.querySelector("#email");
 const emailError = document.querySelector(".email-error");
 email.addEventListener("input", function () {
@@ -20,6 +21,19 @@ email.addEventListener("input", function () {
     emailError.textContent = "";
   } else {
     emailError.textContent = "Email is not Valid";
+  }
+});
+
+//UC3-Mobile number Validation
+
+const tel = document.querySelector("#tel");
+const telError = document.querySelector(".tel-error");
+tel.addEventListener("input", function () {
+  let telRegex = RegExp("^[1-9]{2}[ ][0-9]{10}$");
+  if (telRegex.test(tel.value)) {
+    telError.textContent = "";
+  } else {
+    telError.textContent = "telephone number is not Valid";
   }
 });
 
