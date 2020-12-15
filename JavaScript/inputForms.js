@@ -10,7 +10,6 @@ text.addEventListener("input", function () {
 });
 
 //UC2 -Email Validation
-
 const email = document.querySelector("#email");
 const emailError = document.querySelector(".email-error");
 email.addEventListener("input", function () {
@@ -25,7 +24,6 @@ email.addEventListener("input", function () {
 });
 
 //Salary range button synchronised with values of user
-
 const salary = document.querySelector("#salary");
 const output = document.querySelector(".salary-output");
 output.textContent = salary.value;
